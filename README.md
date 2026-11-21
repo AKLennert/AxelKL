@@ -1,12 +1,44 @@
-# React + Vite
+# AxelKL.com
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal CV and portfolio for Axel Lennert, live at [axelkl.com](https://axelkl.com).
 
-Currently, two official plugins are available:
+Built with React 19 + Vite (JavaScript) and React Router, hosted on Firebase Hosting (project `axelkl-cv`).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Develop
 
-## Expanding the ESLint configuration
+```sh
+npm install
+npm run dev       # http://localhost:5173
+npm run lint
+npm run build     # outputs to dist/
+npm run preview   # serve the production build locally
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Deploy
+
+```sh
+npm run build
+firebase deploy --only hosting
+```
+
+## Editing content
+
+- **CV content** (hero text, about, facts, skills, projects, links) lives in `src/data/content.js`.
+- **CV PDF**: replace `public/CV/Axel-Lennert-CV.pdf`.
+- **Project screenshots**: put images in `public/projects/` and set `thumb: "/projects/name.png"` on the project in `content.js`.
+- **Styles**: `src/styles/site.css` (light/dark tokens at the top).
+
+## Structure
+
+```
+src/
+  main.jsx              router + analytics bootstrap
+  App.jsx               routes: /, /contact, /thanks, 404
+  firebase.js           Firebase config; Analytics is lazy-loaded once measurementId is set
+  data/content.js       all CV copy
+  components/           Nav, Footer, Hero, About, Skills, Work, ContactCta, ...
+  pages/                Home, Contact (FormSubmit), Thanks, NotFound
+  hooks/                useTheme, useActiveSection, useDocumentTitle
+```
+
+The contact form posts to FormSubmit, which emails the message and redirects to `/thanks`.
