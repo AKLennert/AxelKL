@@ -7,10 +7,7 @@ const firebaseConfig = {
   storageBucket: "axelkl-cv.firebasestorage.app",
   messagingSenderId: "6761695925",
   appId: "1:6761695925:web:aaff77b0f5dd9535304cfc",
-  // TODO: add once Google Analytics is enabled for the project
-  // (Firebase console → Project settings → Integrations → Google Analytics).
-  // Analytics stays off until this is set.
-  measurementId: "",
+  measurementId: "G-DWPC06XJJ3",
 };
 
 // Firebase is loaded lazily, and only in production builds with a

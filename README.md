@@ -34,7 +34,7 @@ firebase deploy --only hosting
 src/
   main.jsx              router + analytics bootstrap
   App.jsx               routes: /, /contact, /thanks, 404
-  firebase.js           Firebase config; Analytics is lazy-loaded once measurementId is set
+  firebase.js           Firebase config; Analytics (GA4) is lazy-loaded in production builds
   data/content.js       all CV copy
   components/           Nav, Footer, Hero, About, Skills, Work, ContactCta, ...
   pages/                Home, Contact (FormSubmit), Thanks, NotFound
