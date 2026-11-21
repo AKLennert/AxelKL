@@ -80,23 +80,29 @@ export const skills = [
   },
 ];
 
-// Add a `thumb` (path under /public) and optional `href` to each project.
+// Each project: title, desc, stack, and optionally
+//   thumb      – screenshot under /public (16:10 works best), e.g. "/projects/x.webp"
+//   thumbLabel – placeholder text shown when there's no screenshot
+//   href       – live site
+//   repo       – public source code
 export const projects = [
+  {
+    title: "The Study Ledger",
+    desc:
+      "A storefront for self-paced written courses in full-stack React and " +
+      "data analysis in R. Google sign-in, Paystack checkout and instant PDF " +
+      "delivery, with every future lesson added to a buyer's library free.",
+    stack: "Angular · Firebase Auth · Firestore · Cloud Functions · Paystack",
+    thumb: "/projects/study-ledger.webp",
+    href: "https://notes.mysticalscrolls.com",
+  },
   {
     title: "AxelKL.com",
     desc:
       "This site: a personal CV and portfolio built with React and Vite, " +
       "hosted on Firebase with a live contact form and analytics.",
     stack: "React · Vite · JavaScript · Firebase",
-    thumbLabel: "project screenshot",
-    href: "https://github.com/AKLennert/AxelKL",
-  },
-  {
-    title: "Coming soon",
-    desc:
-      "Each project gets a screenshot, a one-line outcome, and its stack. " +
-      "Placeholder for now.",
-    stack: "React · TypeScript · SQL",
-    thumbLabel: "your project here",
+    thumb: "/projects/axelkl.webp",
+    repo: "https://github.com/AKLennert/AxelKL",
   },
 ];

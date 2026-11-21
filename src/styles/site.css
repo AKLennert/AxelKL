@@ -481,7 +481,26 @@ a:hover {
 
 .card__thumb--img {
   width: 100%;
+  height: auto;
   object-fit: cover;
+  object-position: top;
+  border: 1px solid var(--line);
+}
+
+.card__thumb-link {
+  display: block;
+}
+
+.card__thumb-link:hover {
+  opacity: 0.85;
+}
+
+.card__links {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .card__title a {
