@@ -6,7 +6,7 @@ export const site = {
   email: "Axel@mysticalscrolls.com",
   location: "Cape Town · South Africa",
   cv: "/CV/Axel-Lennert-CV.pdf",
-  status: "Open to internships & freelance",
+  status: "Open to internships, graduate roles & freelance",
 };
 
 export const links = {
@@ -27,9 +27,9 @@ export const hero = {
   title: "Full-stack web developer building considered digital products.",
   lede:
     "I'm Axel Lennert, a developer who designs and builds fast, reliable web " +
-    "experiences across the stack, from React front-ends to SQL and Firebase " +
-    "back-ends. Third-year BCom Information Systems student at Stellenbosch " +
-    "University.",
+    "experiences across the stack, from React front-ends to Express, SQL and " +
+    "Firebase back-ends. Final-year BCom Information Systems student at " +
+    "Stellenbosch University.",
 };
 
 export const about = [
@@ -40,6 +40,10 @@ export const about = [
     "program in 2014, built my first server in 2019, and started web " +
     "development in 2020. Today I'm studying Information Systems at " +
     "Stellenbosch, still relentlessly curious and still shipping.",
+  "This year I was lead developer on Pluto, a family finance app built by " +
+    "a four-person team. I set the architecture, ran our GitHub repository " +
+    "and kept the team moving, and we finished with the top mark in the " +
+    "class (89%).",
 ];
 
 export const facts = [
@@ -47,10 +51,15 @@ export const facts = [
   {
     key: "Studying",
     val: "BCom Information Systems",
-    sub: "Stellenbosch University · 3rd year",
+    sub: "Stellenbosch University · Final year",
+  },
+  {
+    key: "Recognition",
+    val: "Top of class, 89%",
+    sub: "Lead developer · group project",
   },
   { key: "Focus", val: "Full-stack web" },
-  { key: "Availability", val: "Internships & freelance" },
+  { key: "Availability", val: "Internships, grad roles & freelance" },
 ];
 
 export const skills = [
@@ -59,7 +68,7 @@ export const skills = [
     items: [
       "JavaScript & TypeScript",
       "React · Angular",
-      "Vite",
+      "Material UI · Vite",
       "HTML5 · CSS3",
       "Responsive design",
     ],
@@ -67,16 +76,22 @@ export const skills = [
   {
     title: "Back-end & data",
     items: [
-      "SQL & databases",
-      "Firebase / Firestore",
-      "Auth & hosting",
+      "Node.js · Express",
       "REST APIs",
-      "Analytics",
+      "SQL & relational databases",
+      "Firebase / Firestore",
+      "Auth, hosting & analytics",
     ],
   },
   {
     title: "Craft & tools",
-    items: ["UI/UX design", "Git & GitHub", "SEO fundamentals", "Web performance"],
+    items: [
+      "Team leadership",
+      "Git & GitHub workflow",
+      "UI/UX design · Figma",
+      "SEO fundamentals",
+      "Web performance",
+    ],
   },
 ];
 
@@ -86,6 +101,15 @@ export const skills = [
 //   href       – live site
 //   repo       – public source code
 export const projects = [
+  {
+    title: "Pluto",
+    desc:
+      "A family finance and budgeting app, built as a university group " +
+      "project. As lead developer I set the architecture and ran the team's " +
+      "GitHub repo; the project earned the top mark in the class (89%).",
+    stack: "React · Material UI · Express · SQL",
+    thumbLabel: "Pluto · Lead developer",
+  },
   {
     title: "The Study Ledger",
     desc:
