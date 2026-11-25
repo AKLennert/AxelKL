@@ -4,7 +4,7 @@ export const site = {
   name: "Axel Lennert",
   url: "https://axelkl.com",
   email: "Axel@mysticalscrolls.com",
-  location: "Cape Town · South Africa",
+  location: "Stellenbosch · Western Cape",
   cv: "/CV/Axel-Lennert-CV.pdf",
   status: "Open to internships, graduate roles & freelance",
 };
@@ -19,6 +19,7 @@ export const links = {
 
 export const sections = [
   { id: "about", label: "About" },
+  { id: "experience", label: "Experience" },
   { id: "skills", label: "Skills" },
   { id: "work", label: "Work" },
 ];
@@ -28,8 +29,8 @@ export const hero = {
   lede:
     "I'm Axel Lennert, a developer who designs and builds fast, reliable web " +
     "experiences across the stack, from React front-ends to Express, SQL and " +
-    "Firebase back-ends. Final-year BCom Information Systems student at " +
-    "Stellenbosch University.",
+    "Firebase back-ends. Final-year BCom Management Sciences student " +
+    "(Information Systems and Logistics) at Stellenbosch University.",
 };
 
 export const about = [
@@ -42,24 +43,60 @@ export const about = [
     "Stellenbosch, still relentlessly curious and still shipping.",
   "This year I was lead developer on Pluto, a family finance app built by " +
     "a four-person team. I set the architecture, ran our GitHub repository " +
-    "and kept the team moving, and we finished with the top mark in the " +
-    "class (89%).",
+    "and kept the team moving.",
 ];
 
 export const facts = [
-  { key: "Based in", val: "South Africa" },
+  { key: "Based in", val: "Stellenbosch, South Africa" },
   {
     key: "Studying",
-    val: "BCom Information Systems",
-    sub: "Stellenbosch University · Final year",
+    val: "BCom Management Sciences",
+    sub: "Information Systems & Logistics · Stellenbosch University",
   },
   {
-    key: "Recognition",
-    val: "Top of class, 89%",
-    sub: "Lead developer · group project",
+    key: "Freelance",
+    val: "Mystical Scrolls",
+    sub: "Web & mobile studio",
   },
   { key: "Focus", val: "Full-stack web" },
   { key: "Availability", val: "Internships, grad roles & freelance" },
+];
+
+// Most recent first. `client` is optional.
+export const experience = [
+  {
+    role: "Founder & Web Developer",
+    org: "Mystical Scrolls · freelance studio",
+    client: "Client: Colyn & Associates",
+    dates: "Jun 2026 – Present",
+    points: [
+      "Building an attorney and client management app with an attorney " +
+        "directory, client referrals, invite-code onboarding and legal " +
+        "calculators, on Ionic, Angular and Firebase, packaged for Android.",
+      "Engaged for a follow-on business management and analysis system " +
+        "with AI-generated insights.",
+    ],
+  },
+  {
+    role: "Web Development Intern",
+    org: "Max Media",
+    dates: "Dec 2025 – Feb 2026",
+    points: [
+      "Built and deployed Golfy, a golf scoring web app, as a capability " +
+        "project: four-ball games, hole-by-hole scoring, leaderboards and " +
+        "public profiles on Angular and Firebase.",
+    ],
+  },
+  {
+    role: "Administrative Assistant",
+    org: "Uniforms Unlimited",
+    dates: "Jan 2023 – Oct 2023",
+    points: [
+      "Processed customer and supplier orders, handled shipping and " +
+        "dispatch, ran stock takes and kept the order and inventory " +
+        "spreadsheets.",
+    ],
+  },
 ];
 
 export const skills = [
@@ -68,9 +105,9 @@ export const skills = [
     items: [
       "JavaScript & TypeScript",
       "React · Angular",
-      "Material UI · Vite",
-      "HTML5 · CSS3",
-      "Responsive design",
+      "Ionic · Capacitor (Android)",
+      "Material UI · Vite · Zustand",
+      "HTML5 · CSS3 · responsive design",
     ],
   },
   {
@@ -78,9 +115,9 @@ export const skills = [
     items: [
       "Node.js · Express",
       "REST APIs",
-      "SQL & relational databases",
-      "Firebase / Firestore",
-      "Auth, hosting & analytics",
+      "PostgreSQL & SQL",
+      "Firebase: Auth, Firestore, Functions",
+      "Paystack payments & webhooks",
     ],
   },
   {
@@ -88,9 +125,9 @@ export const skills = [
     items: [
       "Team leadership",
       "Git & GitHub workflow",
+      "Testing with Vitest",
       "UI/UX design · Figma",
-      "SEO fundamentals",
-      "Web performance",
+      "SEO & web performance",
     ],
   },
 ];
@@ -105,9 +142,10 @@ export const projects = [
     title: "Pluto",
     desc:
       "A family finance and budgeting app, built as a university group " +
-      "project. As lead developer I set the architecture and ran the team's " +
-      "GitHub repo; the project earned the top mark in the class (89%).",
-    stack: "React · Material UI · Express · SQL",
+      "project. As lead developer I set the architecture, ran the team's " +
+      "GitHub repo, wrote 179 of 308 commits and built most of the React " +
+      "front-end. I scored 89% for my contributions, the top mark in the class.",
+    stack: "React · Material UI · Express · PostgreSQL",
     thumbLabel: "Pluto · Lead developer",
   },
   {
@@ -115,18 +153,29 @@ export const projects = [
     desc:
       "A storefront for self-paced written courses in full-stack React and " +
       "data analysis in R. Google sign-in, Paystack checkout and instant PDF " +
-      "delivery, with every future lesson added to a buyer's library free.",
+      "delivery, with purchases recorded only by a signature-verified " +
+      "webhook and files served through short-lived signed links.",
     stack: "Angular · Firebase Auth · Firestore · Cloud Functions · Paystack",
     thumb: "/projects/study-ledger.webp",
     href: "https://notes.mysticalscrolls.com",
   },
   {
-    title: "AxelKL.com",
+    title: "Golfy",
     desc:
-      "This site: a personal CV and portfolio built with React and Vite, " +
-      "hosted on Firebase with a live contact form and analytics.",
-    stack: "React · Vite · JavaScript · Firebase",
-    thumb: "/projects/axelkl.webp",
-    repo: "https://github.com/AKLennert/AxelKL",
+      "A golf scoring app built during my Max Media internship. Players " +
+      "create four-ball games, score hole by hole on any course, and track " +
+      "leaderboards, game history and public profiles.",
+    stack: "Angular · Angular Material · Firebase",
+    thumbLabel: "Golfy · Max Media internship",
+    href: "https://golfy.mysticalscrolls.com",
+  },
+  {
+    title: "Dice & Dust",
+    desc:
+      "A dice-rolling roguelite, in development. The engine is pure " +
+      "TypeScript with a seeded RNG, so a Cloud Function can replay every " +
+      "run to verify leaderboard scores. Engine logic has 100% test coverage.",
+    stack: "TypeScript · React · Zustand · Firebase · Vitest",
+    thumbLabel: "Dice & Dust · In development",
   },
 ];

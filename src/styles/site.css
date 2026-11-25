@@ -352,6 +352,69 @@ a:hover {
   font-weight: 400;
 }
 
+/* ── Experience ─────────────────────────────── */
+.timeline {
+  list-style: none;
+  margin-top: 26px;
+}
+
+.timeline__item {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 40px;
+  padding: 24px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.timeline__item:first-child {
+  padding-top: 0;
+}
+
+.timeline__item:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.timeline__dates {
+  font: 12px var(--mono);
+  color: var(--muted);
+  padding-top: 3px;
+}
+
+.timeline__role {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--fg);
+}
+
+.timeline__org {
+  font-weight: 400;
+  color: var(--body);
+}
+
+.timeline__client {
+  margin-top: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.timeline__points {
+  margin-top: 10px;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--body);
+}
+
+.timeline__points li + li {
+  margin-top: 6px;
+}
+
+.timeline__points li::marker {
+  color: var(--accent);
+}
+
 /* ── Skills ─────────────────────────────────── */
 .skills {
   display: grid;
@@ -657,6 +720,11 @@ a:hover {
   .skills {
     grid-template-columns: 1fr;
     gap: 36px;
+  }
+
+  .timeline__item {
+    grid-template-columns: 1fr;
+    gap: 8px;
   }
 
   .hero {
